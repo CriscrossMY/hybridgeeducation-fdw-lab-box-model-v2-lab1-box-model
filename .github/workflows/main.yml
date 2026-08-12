@@ -16,11 +16,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm install puppeteer
-
-      - name: Run test
-        run: node test.js
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y chromium-browser
 
       - name: Install dependencies
         run: npm install puppeteer
